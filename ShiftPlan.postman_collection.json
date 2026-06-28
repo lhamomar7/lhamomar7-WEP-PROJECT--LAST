@@ -1,0 +1,72 @@
+{
+  "info": {
+    "name": "ShiftPlan API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Login",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "{{baseUrl}}/api/auth/login",
+        "body": {
+          "mode": "raw",
+          "raw": "{\"email\": \"manager@shiftplan.com\", \"password\": \"123456\"}"
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Shifts",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/api/shifts"
+      },
+      "response": []
+    },
+    {
+      "name": "Create Shift",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "{{baseUrl}}/api/shifts",
+        "body": {
+          "mode": "raw",
+          "raw": "{\"employee\": \"USER_ID\", \"day\": \"ראשון\", \"start\": \"08:00\", \"end\": \"16:00\", \"role\": \"נציג\", \"department\": \"שירות\"}"
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Stats",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/api/shifts/stats"
+      },
+      "response": []
+    },
+    {
+      "name": "External Holidays",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/api/external/holidays?year=2026"
+      },
+      "response": []
+    }
+  ]
+}

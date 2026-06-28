@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShiftPlan | התחברות</title>
+  <link rel="stylesheet" href="style/main.css">
+</head>
+<body>
+
+  <header class="top-bar">
+    <a class="logo" href="index.html">ShiftPlan</a>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">ראשי</a>
+      <a href="shifts.html">משמרות</a>
+      <a href="constraints.html">אילוצים</a>
+      <a href="dashboard.html">ניהול</a>
+      <a href="login.html" id="loginLink" class="active btn-login">התחברות</a>
+      <button class="logout-btn hidden" id="logoutBtn">התנתקות</button>
+    </nav>
+    <button class="menu-btn" id="menuBtn" aria-label="תפריט">☰</button>
+  </header>
+
+  <main>
+    <section class="auth-card">
+      <h1>התחברות</h1>
+      <div id="message" class="message hidden"></div>
+
+      <form id="loginForm">
+        <label>
+          אימייל
+          <input id="email" type="email" value="manager@shiftplan.com" required autocomplete="email">
+        </label>
+        <label>
+          סיסמה
+          <input id="password" type="password" value="123456" required autocomplete="current-password">
+        </label>
+        <button class="btn primary full" type="submit">כניסה למערכת</button>
+      </form>
+
+      <p class="auth-hint">משתמש בדיקה: manager@shiftplan.com / 123456</p>
+    </section>
+  </main>
+
+  <footer>© 2026 ShiftPlan — עומר לחאם ועבדאללה עיד</footer>
+
+  <script src="js/api.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

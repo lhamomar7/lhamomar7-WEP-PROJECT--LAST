@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShiftPlan | דף ראשי</title>
+  <link rel="stylesheet" href="style/main.css">
+</head>
+<body>
+
+  <header class="top-bar">
+    <a class="logo" href="index.html">ShiftPlan</a>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">ראשי</a>
+      <a href="shifts.html">משמרות</a>
+      <a href="constraints.html">אילוצים</a>
+      <a href="dashboard.html">ניהול</a>
+      <a href="login.html" id="loginLink" class="btn-login">התחברות</a>
+      <button class="logout-btn hidden" id="logoutBtn">התנתקות</button>
+    </nav>
+    <button class="menu-btn" id="menuBtn" aria-label="תפריט">☰</button>
+  </header>
+
+  <main>
+    <div id="submissionStatusCard" class="submission-cta hidden"></div>
+
+    <section class="hero">
+      <div class="hero-text">
+        <span class="badge">ניהול משמרות</span>
+        <h1>סידור עבודה, זמינות ואילוצים — במקום אחד</h1>
+        <p>עובדים מדווחים זמינות לפי שבוע פתוח, מנהלים בונים סידור ומאשרים בקשות בלחיצה.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="shifts.html">צפייה במשמרות</a>
+          <a class="btn ghost" style="color:#fff;border-color:rgba(255,255,255,0.3)" href="constraints.html">הגשת אילוץ</a>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <h2 id="statusCardTitle">סטטוס שבועי</h2>
+        <div class="mini-row"><span>משמרות</span><strong id="totalShifts">—</strong></div>
+        <div class="mini-row" id="activeEmployeesRow"><span>עובדים פעילים</span><strong id="activeEmployees">—</strong></div>
+        <div class="mini-row"><span>סה״כ שעות</span><strong id="totalHours">—</strong></div>
+      </div>
+    </section>
+
+    <section class="features">
+      <article class="feature-card">
+        <h3>CRUD מלא</h3>
+        <p>הוספה, צפייה, עדכון ומחיקה של משמרות בזמן אמת.</p>
+      </article>
+      <article class="feature-card">
+        <h3>שבועות מנוהלים</h3>
+        <p>המנהל פותח שבוע, או שהמערכת פותחת שבוע חדש אוטומטית בסיומו.</p>
+      </article>
+      <article class="feature-card">
+        <h3>API חיצוני</h3>
+        <p>חגים רשמיים בישראל, לתכנון עומסים סביב ימי חג.</p>
+      </article>
+    </section>
+
+    <section class="panel">
+      <h2>חגים קרובים</h2>
+      <div id="holidaysBox" class="list">
+        <p class="loading-message">טוען חגים...</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>© 2026 ShiftPlan — עומר לחאם ועבדאללה עיד</footer>
+
+  <script src="js/api.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/login-modal.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>

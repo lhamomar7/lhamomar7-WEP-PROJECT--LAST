@@ -1,0 +1,7 @@
+Project Name: ShiftPlan
+Students: עומר לחאם, עבדאללה עיד
+External API: Nager.Date Public Holidays API
+JavaScript Library: FullCalendar CDN / ניתן להוסיף בעמוד לוח שנה
+Database: MongoDB
+Server: Node.js + Express
+Special notes: יש להריץ npm install בתוך תיקיית server ולהגדיר MONGO_URI בקובץ .env.

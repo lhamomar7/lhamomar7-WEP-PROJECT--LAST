@@ -1,0 +1,20 @@
+{
+  "name": "shiftplan-professional",
+  "version": "1.0.0",
+  "description": "ShiftPlan - full stack shift scheduling system",
+  "scripts": {
+    "install-all": "npm install --prefix server",
+    "dev": "npm run dev --prefix server",
+    "start": "npm start --prefix server",
+    "seed": "npm run seed --prefix server"
+  },
+  "keywords": [
+    "shift",
+    "schedule",
+    "node",
+    "express",
+    "mongodb"
+  ],
+  "author": "Omar Lham",
+  "license": "MIT"
+}
