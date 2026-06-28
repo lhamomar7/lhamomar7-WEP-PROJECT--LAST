@@ -33,7 +33,7 @@ app.use(express.json());
 app.use(morgan('dev'));
 app.use(rateLimit({ windowMs: 15 * 60 * 1000, max: 200 }));
 
-app.use(express.static(path.join(__dirname, '../client')));
+app.use(express.static(path.join(__dirname, '..')));
 app.get('/health', (req, res) => res.json({ success: true, message: 'ShiftPlan API is running' }));
 app.use('/api/auth', authRoutes);
 app.use('/api/shifts', shiftRoutes);
