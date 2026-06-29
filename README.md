@@ -33,7 +33,7 @@ npm run dev
 
 ## קישורים להגשה
 - Live Website: https://shiftplan-server.onrender.com/index.html
-- Client GitHub: להוסיף
+- Client GitHub: https://lhamomar7.github.io/shiftplan-client/index.html
 - Server GitHub: https://lhamomar7.github.io/lhamomar7-WEP-PROJECT--LAST/
 - Figma: https://www.figma.com/proto/Jgq7FHR7gOpTqFNVoywkAj/ShiftPlan-Mockup?node-id=0-1&t=VCYZpBU5uP9iKpl1-1
 - Postman Collection: `postman/ShiftPlan.postman_collection.json`
