@@ -32,10 +32,10 @@ npm run dev
 - password: 123456
 
 ## קישורים להגשה
-- Live Website: להוסיף לאחר העלאה
+- Live Website: https://shiftplan-server.onrender.com/index.html
 - Client GitHub: להוסיף
-- Server GitHub: להוסיף
-- Figma: להוסיף
+- Server GitHub: 
+- Figma: https://www.figma.com/proto/Jgq7FHR7gOpTqFNVoywkAj/ShiftPlan-Mockup?node-id=0-1&t=VCYZpBU5uP9iKpl1-1
 - Postman Collection: `postman/ShiftPlan.postman_collection.json`
 
 ## הערות לבודקים
