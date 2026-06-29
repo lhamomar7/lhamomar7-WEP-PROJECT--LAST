@@ -1,8 +1,10 @@
 // api.js
 // Small helper for talking to the ShiftPlan backend.
 
+// Empty string means "same origin" — works both on localhost:5000
 // (where Express serves these files) and on the deployed URL (Render etc).
-const API_BASE = '';
+const API_BASE = 'http://localhost:5000';
+
 function getToken() {
   return localStorage.getItem('shiftplan_token');
 }
