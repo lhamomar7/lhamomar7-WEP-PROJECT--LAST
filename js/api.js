@@ -3,7 +3,7 @@
 
 // Empty string means "same origin" — works both on localhost:5000
 // (where Express serves these files) and on the deployed URL (Render etc).
-const API_BASE = 'http://localhost:5000';
+const API_BASE = '';
 
 function getToken() {
   return localStorage.getItem('shiftplan_token');
