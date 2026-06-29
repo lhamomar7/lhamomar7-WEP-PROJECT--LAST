@@ -1,17 +1,6 @@
 import express from 'express';
-import {
-  getWeeklyAvailabilities,
-  getMyWeeklyAvailability,
-  submitWeeklyAvailability,
-  updateWeeklyAvailabilityStatus
-} from '../controllers/weeklyAvailabilityController.js';
+import { getUsers } from '../controllers/userController.js';
 import { protect, adminOnly } from '../middleware/authMiddleware.js';
-
 const router = express.Router();
-
-router.get('/', protect, getWeeklyAvailabilities);
-router.get('/mine', protect, getMyWeeklyAvailability);
-router.post('/', protect, submitWeeklyAvailability);
-router.patch('/:id/status', protect, adminOnly, updateWeeklyAvailabilityStatus);
-
+router.get('/', protect, adminOnly, getUsers);
 export default router;
