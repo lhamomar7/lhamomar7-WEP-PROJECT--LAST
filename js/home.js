@@ -86,31 +86,6 @@ async function loadHomeStats() {
       console.log('could not load stats:', err);
     }
   }
-
-  try {
-    const holidays = await api('/api/external/holidays');
-    const holidaysBox = document.getElementById('holidaysBox');
-
-    if (!holidays.data.length) {
-      holidaysBox.innerHTML = '<p class="empty-message">לא נמצאו חגים קרובים.</p>';
-      return;
-    }
-
-    holidaysBox.innerHTML = holidays.data
-      .map(h => `
-        <div class="list-item" style="background:#f8f8f6;border:1px solid var(--line);border-radius:8px;padding:12px 14px">
-          <strong>${h.localName}</strong><br>
-          <span class="mono" style="color:var(--muted);font-size:0.85rem">${h.date}</span>
-        </div>
-      `)
-      .join('');
-
-  } catch (err) {
-    const holidaysBox = document.getElementById('holidaysBox');
-    if (holidaysBox) {
-      holidaysBox.innerHTML = '<p class="empty-message">לא ניתן לטעון חגים כרגע.</p>';
-    }
-  }
 }
 
 loadSubmissionStatusCard();
