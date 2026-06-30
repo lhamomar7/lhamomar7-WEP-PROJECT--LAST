@@ -1,6 +1,7 @@
 {
   "info": {
     "name": "ShiftPlan API",
+    "description": "ShiftPlan REST API - Final Project",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
   },
   "item": [
@@ -17,7 +18,7 @@
         "url": "{{baseUrl}}/api/auth/login",
         "body": {
           "mode": "raw",
-          "raw": "{\"email\": \"manager@shiftplan.com\", \"password\": \"123456\"}"
+          "raw": "{\"email\":\"manager@shiftplan.com\",\"password\":\"123456\"}"
         }
       },
       "response": []
@@ -47,7 +48,7 @@
         "url": "{{baseUrl}}/api/shifts",
         "body": {
           "mode": "raw",
-          "raw": "{\"employee\": \"USER_ID\", \"day\": \"ראשון\", \"start\": \"08:00\", \"end\": \"16:00\", \"role\": \"נציג\", \"department\": \"שירות\"}"
+          "raw": "{\"employee\":\"USER_ID\",\"day\":\"ראשון\",\"start\":\"08:00\",\"end\":\"16:00\",\"role\":\"נציג\",\"department\":\"שירות\"}"
         }
       },
       "response": []
@@ -67,6 +68,16 @@
         "url": "{{baseUrl}}/api/external/holidays?year=2026"
       },
       "response": []
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://shiftplan-server.onrender.com"
+    },
+    {
+      "key": "token",
+      "value": ""
     }
   ]
 }
