@@ -59,12 +59,28 @@
     </section>
 
     <section class="panel">
-      <h2>חגים קרובים</h2>
-      <div id="holidaysBox" class="list">
-        <p class="loading-message">טוען חגים...</p>
+      <div class="calendar-header">
+        <button class="cal-nav-btn" id="calPrevBtn" aria-label="חודש קודם">‹</button>
+        <h2 id="calMonthTitle">לוח שנה</h2>
+        <button class="cal-nav-btn" id="calNextBtn" aria-label="חודש הבא">›</button>
+      </div>
+      <div class="calendar-weekdays">
+        <span>א</span><span>ב</span><span>ג</span><span>ד</span><span>ה</span><span>ו</span><span>ש</span>
+      </div>
+      <div id="calendarGrid" class="calendar-grid">
+        <p class="loading-message">טוען לוח שנה...</p>
       </div>
     </section>
   </main>
+
+  <!-- Day-detail modal, opened by clicking a calendar day -->
+  <div class="modal-overlay hidden" id="dayModalOverlay">
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="dayModalTitle">
+      <button type="button" class="modal-close" id="dayModalClose" aria-label="סגירה">×</button>
+      <h2 id="dayModalTitle">פרטי יום</h2>
+      <div id="dayModalBody"></div>
+    </div>
+  </div>
 
   <footer>© 2026 ShiftPlan — עומר לחאם ועבדאללה עיד</footer>
 
@@ -72,5 +88,6 @@
   <script src="js/auth.js"></script>
   <script src="js/login-modal.js"></script>
   <script src="js/home.js"></script>
+  <script src="js/calendar.js"></script>
 </body>
 </html>
