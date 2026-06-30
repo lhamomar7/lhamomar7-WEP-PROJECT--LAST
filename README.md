@@ -30,6 +30,11 @@ npm run dev
 עובד:
 - email: employee@shiftplan.com
 - password: 123456
+- עובד עם נתונים לבדיקה:
+- email: amir@shiftplan.com
+- passowrd: 123456
+
+- ניתן לצור משתמש חדש, רק דרך המנהל בעמודת הניהול, דרך הוספת פרטים לעובד חדש + אישורו על ידי המנהל הישיר.
 
 ## קישורים להגשה
 - Live Website: https://shiftplan-server.onrender.com/index.html
