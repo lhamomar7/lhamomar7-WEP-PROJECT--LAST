@@ -41,7 +41,6 @@ npm run dev
 - Client GitHub: https://lhamomar7.github.io/shiftplan-client/index.html +   https://github.com/lhamomar7/shiftplan-client
 - Server GitHub: https://lhamomar7.github.io/lhamomar7-WEP-PROJECT--LAST/ +  https://github.com/lhamomar7/lhamomar7-WEP-PROJECT--LAST 
 - Figma: https://www.figma.com/proto/Jgq7FHR7gOpTqFNVoywkAj/ShiftPlan-Mockup?node-id=0-1&t=VCYZpBU5uP9iKpl1-1
-- Postman Collection: `postman/ShiftPlan.postman_collection.json`
-
+## Postman Collection-  postman/ShiftPlan.postman_collection.json --> https://github.com/lhamomar7/lhamomar7-WEP-PROJECT--LAST/blob/main/ShiftPlan.postman_collection.json
 ## הערות לבודקים
 המערכת כוללת CRUD מלא למשמרות, ניהול משתמשים, בקשות אילוצים, שאילתות חיפוש/סינון/סטטיסטיקה וקריאה ל־API חיצוני להצגת חגים בישראל.
