@@ -107,3 +107,64 @@ function setupCreateUserForm() {
 setupShiftForm();
 setupCreateUserForm();
 loadDashboardData();
+
+// ───────────────────────── Employee list panel ─────────────────────────
+
+function formatJoinDate(isoDate) {
+  if (!isoDate) return '—';
+  const d = new Date(isoDate);
+  return d.toLocaleDateString('he-IL');
+}
+
+function renderEmployeeCard(user) {
+  const roleLabel = user.role === 'manager' ? 'מנהל' : 'עובד';
+  const statusLabel = user.isActive === false ? 'לא פעיל' : 'פעיל';
+  const statusClass = user.isActive === false ? 'rejected' : 'approved';
+
+  return `
+    <div class="list-item" style="background:#fff;border:1px solid var(--line);border-radius:8px;padding:14px 16px;margin-bottom:8px">
+      <div style="display:flex;justify-content:space-between;align-items:start;gap:10px;flex-wrap:wrap">
+        <div>
+          <strong>${user.fullName}</strong>
+          <span class="mono" style="color:var(--muted);margin-right:8px">${roleLabel}</span>
+          <div style="color:var(--muted);font-size:0.85rem;margin-top:4px">${user.email}</div>
+          <div style="color:var(--muted);font-size:0.85rem;margin-top:2px">מחלקה: ${user.department || '—'}</div>
+          <div style="color:var(--muted);font-size:0.78rem;margin-top:4px">הצטרף/ה: ${formatJoinDate(user.createdAt)}</div>
+        </div>
+        <span class="status-pill ${statusClass}">${statusLabel}</span>
+      </div>
+    </div>
+  `;
+}
+
+// Fetches and displays every user (employees and managers) so the
+// manager can review the team at a glance. Triggered by a button click
+// rather than loading automatically, to keep the page light on first load.
+async function loadEmployeesList() {
+  const container = document.getElementById('employeesList');
+  if (!container) return;
+
+  container.innerHTML = '<p class="loading-message">טוען עובדים...</p>';
+
+  try {
+    const res = await api('/api/users');
+
+    if (res.data.length === 0) {
+      container.innerHTML = '<p class="empty-message">אין עובדים להצגה</p>';
+      return;
+    }
+
+    container.innerHTML = res.data.map(renderEmployeeCard).join('');
+
+  } catch (err) {
+    container.innerHTML = `<p class="empty-message">${err.message}</p>`;
+  }
+}
+
+function setupEmployeesListButton() {
+  const btn = document.getElementById('loadEmployeesBtn');
+  if (!btn) return;
+  btn.addEventListener('click', loadEmployeesList);
+}
+
+setupEmployeesListButton();
