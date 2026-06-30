@@ -81,6 +81,47 @@
         <div id="statsBox" class="list" style="margin-top:6px"></div>
       </aside>
     </section>
+
+    <section class="panel">
+      <h2>יצירת משתמש חדש</h2>
+      <p style="color:var(--muted);font-size:0.88rem;margin-bottom:14px">
+        רק מנהל יכול ליצור חשבונות חדשים לעובדים או למנהלים נוספים.
+      </p>
+      <form id="createUserForm" class="shift-form">
+        <div id="createUserMessage" class="message hidden"></div>
+
+        <label>
+          שם מלא
+          <input id="newUserName" required placeholder="לדוגמה: דנה כהן">
+        </label>
+
+        <label>
+          אימייל
+          <input id="newUserEmail" type="email" required placeholder="dana@shiftplan.com">
+        </label>
+
+        <label>
+          סיסמה זמנית
+          <input id="newUserPassword" type="password" required minlength="6" placeholder="לפחות 6 תווים">
+        </label>
+
+        <div class="two-cols">
+          <label>
+            תפקיד
+            <select id="newUserRole" required>
+              <option value="employee">עובד</option>
+              <option value="manager">מנהל</option>
+            </select>
+          </label>
+          <label>
+            מחלקה
+            <input id="newUserDepartment" required placeholder="שירות">
+          </label>
+        </div>
+
+        <button class="btn primary" type="submit">יצירת משתמש</button>
+      </form>
+    </section>
   </main>
 
   <footer>© 2026 ShiftPlan — עומר לחאם ועבדאללה עיד</footer>
